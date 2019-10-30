@@ -152,9 +152,9 @@ a:hover {
   -webkit-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
-  -webkit-transform: skew(89deg);
-  -ms-transform: skew(89deg);
-  transform: skew(89deg);
+  -webkit-transform: skew(90deg);
+  -ms-transform: skew(90deg);
+  transform: skew(90deg);
 }
 
 #bottomDivider {
@@ -168,9 +168,9 @@ a:hover {
   -webkit-transform-origin: 100% 0;
   -ms-transform-origin: 100% 0;
   transform-origin: 100% 0;
-  -webkit-transform: skew(89deg);
-  -ms-transform: skew(89deg);
-  transform: skew(89deg);
+  -webkit-transform: skew(90deg);
+  -ms-transform: skew(90deg);
+  transform: skew(90deg);
 }
 
 #bottom-footer {
