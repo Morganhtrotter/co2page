@@ -10,6 +10,7 @@
 
 		<!-- Google font -->
 		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat|Oswald|Raleway|Roboto:400,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Roboto+Condensed&display=swap" rel="stylesheet">
 
 		<!-- Bootstrap -->
 		<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
@@ -73,7 +74,18 @@
 		<!-- /Header -->
 
 
-	<div id="topDivider"></div>
+	<div id="topDivider">
+	</div>
+
+	<div id="Instruct">
+		<h2>Instructions:</h2>
+		<p id="Instructions">Use the +1, +5, and +10 buttons to increase the year being visualized by 1, 5, and 10 years respectively. 
+				Similarly, use the -1, -5, -10 buttons to decrease the year. By default, the visualization is in "Isolated" mode,
+				meaning the data you see is the amount of Carbon Dioxide emitted by each country for that particular year (in metric tons).
+				To change this, select the "Compare" button, which shows you the overall change in emissions from one particular
+				year to another. Use the text box just below the "Compare" button to change the year(s) being visualized. Note: any
+				year after the year 2017 is predicted data obtained using a linear extrapolation formula.</p>
+	</div>
 
   <div class="chart-example" id="chart">
     <svg id="mainChart">
@@ -98,19 +110,12 @@
 			<div class="container">
 
 				<!-- row -->
-				<div class="row">
-
-				</div>
-				<!-- /row -->
-
-				<!-- row -->
 				<div id="bottom-footer" class="row">
 
 					<!-- copyright -->
 					<div class="col-md-8 col-md-pull-4">
 						<div class="footer-copyright">
 							 Source:<a class="white-text" href="http://www.globalcarbonatlas.org/en/CO2-emissions" target="_blank">http://www.globalcarbonatlas.org/en/CO2-emissions</a><br/>
-							<span>&copy; Copyright 2018. All Rights Reserved. | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com">Colorlib</a></span>
 						</div>
 					</div>
 					<!-- /copyright -->

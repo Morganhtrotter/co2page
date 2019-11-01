@@ -19,6 +19,13 @@ h3 {
   font-size: 18px;
 }
 
+h2 {
+  font-size:24px;
+  font-family: 'Roboto Condensed', sans-serif;
+  color: #FF9000;
+  margin-top: 50px;
+}
+
 #sum, #choroSum, #vs {
   font-size: 25px;
 }
@@ -108,6 +115,7 @@ h3 {
   border-width: 1px;
   border-radius: 1px;
   border-color: #687864;
+  margin-bottom: 100px;
 }
 
 #chart {
@@ -181,4 +189,12 @@ a:hover {
 
 body {
   background-color: #3B444C;
+}
+
+#Instructions {
+  width: 900px;
+  line-height: 2;
+    margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
 }
