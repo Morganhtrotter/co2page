@@ -614,6 +614,12 @@ text {
     background-color: #3B444C;
   }
   
+  #Resume {
+    color: lightgrey;
+    margin-right: 140px;
+    margin-left: 140px;
+  }
+
   a {
     color: lightgrey;
   }

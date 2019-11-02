@@ -636,7 +636,7 @@ function select(yearValue) {
           .height(30)
           .callback(callback) // Callback returning the current text 
           .text(currentValue + "," + comparedValue) // Default text 
-          .fill("#5085A5") // Default fill 
+          .fill("#8FC1E3") // Default fill 
           .stroke("none") // Default border 
           .fillSelected("#5085A5") // Fill when activated 
           .strokeSelected("none") // Border when activated 
@@ -653,7 +653,7 @@ function select(yearValue) {
           .height(30)
           .callback(callback) // Callback returning the current text 
           .text(currentValue) // Default text 
-          .fill("#5085A5") // Default fill 
+          .fill("#8FC1E3") // Default fill 
           .stroke("none") // Default border 
           .fillSelected("#5085A5") // Fill when activated 
           .strokeSelected("none") // Border when activated 
@@ -667,55 +667,55 @@ function select(yearValue) {
         d3.selectAll(".rectIso").remove();
 
         var rectangleAfrica = svg.append("rect")
-                           .attr("x", 60)
-                           .attr("y", 490)
+                           .attr("x", 70)
+                           .attr("y", 480)
                            .attr("width", 120)
-                           .attr("height", 100)
+                           .attr("height", 110)
                            .attr("class", "rectIso")
                            .style("fill", colorSix)
                            .style("visibility", "visible");
 
         var rectangleAsia = svg.append("rect")
-                           .attr("x", 200)
-                           .attr("y", 490)
+                           .attr("x", 210)
+                           .attr("y", 480)
                            .attr("width", 120)
-                           .attr("height", 100)
+                           .attr("height", 110)
                            .attr("class", "rectIso")
                            .style("fill", colorFive)
                            .style("visibility", "visible");
 
         var rectangleEurope = svg.append("rect")
-                           .attr("x", 400)
-                           .attr("y", 490)
+                           .attr("x", 410)
+                           .attr("y", 480)
                            .attr("width", 120)
-                           .attr("height", 100)
+                           .attr("height", 110)
                            .attr("class", "rectIso")
                            .style("fill", colorFour)
                            .style("visibility", "visible");
 
         var rectangleOceania = svg.append("rect")
-                           .attr("x", 600)
-                           .attr("y", 490)
+                           .attr("x", 610)
+                           .attr("y", 480)
                            .attr("width", 120)
-                           .attr("height", 100)
+                           .attr("height", 110)
                            .attr("class", "rectIso")
                            .style("fill", colorThree)
                            .style("visibility", "visible");
 
         var rectangleSA = svg.append("rect")
-                           .attr("x", 790)
-                           .attr("y",490)
+                           .attr("x", 800)
+                           .attr("y", 480)
                            .attr("width", 120)
-                           .attr("height", 100)
+                           .attr("height", 110)
                            .attr("class", "rectIso")
                            .style("fill", colorTwo)
                            .style("visibility", "visible");
 
         var rectangleNA = svg.append("rect")
-                           .attr("x", 1030)
-                           .attr("y", 490)
+                           .attr("x", 1040)
+                           .attr("y", 480)
                            .attr("width", 120)
-                           .attr("height", 100)
+                           .attr("height", 110)
                            .attr("class", "rectIso")
                            .style("fill", colorOne)
                            .style("visibility", "visible");
@@ -799,6 +799,7 @@ function select(yearValue) {
 
       }
 
+      /*
       // Lines to separate parts of visual
       topEmissions.append("line").attr("x1", 610).attr("y1", 480).attr("x2", 730).attr("y2", 480).attr("stroke-width", 0.5).attr("stroke", "black");
       topEmissions.append("line").attr("x1", 610).attr("y1", 480).attr("x2", 610).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
@@ -812,6 +813,7 @@ function select(yearValue) {
       topEmissions.append("line").attr("x1", 210).attr("y1", 480).attr("x2", 210).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
       topEmissions.append("line").attr("x1", 70).attr("y1", 480).attr("x2", 190).attr("y2", 480).attr("stroke-width", 0.5).attr("stroke", "black");
       topEmissions.append("line").attr("x1", 70).attr("y1", 480).attr("x2", 70).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
+      */
 
       // Parse and write sums
       topEmissions.append("text").html(Math.round(parseFloat(sumOceania) * 1000) / 1000 + " MtCO2").attr("x", 620).attr("y", 570).attr("font-weight", "bold").attr("class", "lightText").attr("id", "sumOceania");

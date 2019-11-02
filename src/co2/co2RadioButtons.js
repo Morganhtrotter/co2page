@@ -5,7 +5,7 @@ var co2ButtonContainer = d3.select("#mainChart").append("g")
 var co2Labels = ['+1', '+5', '+10', '-1', '-5', '-10', 'Compare', 'Isolated']
 
 //colors for different button states
-var defaultColor= "#5085A5";
+var defaultColor= "#8FC1E3";
 var hoverColor= "#31708F";
 var pressedColor= "#31708E";
 
