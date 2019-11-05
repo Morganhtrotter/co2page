@@ -638,7 +638,7 @@ function select(yearValue) {
           .text(currentValue + "," + comparedValue) // Default text 
           .fill("#8FC1E3") // Default fill 
           .stroke("none") // Default border 
-          .fillSelected("#5085A5") // Fill when activated 
+          .fillSelected("#31708E") // Fill when activated 
           .strokeSelected("none") // Border when activated 
           .color("white")
           .colorSelected("white")
@@ -655,7 +655,7 @@ function select(yearValue) {
           .text(currentValue) // Default text 
           .fill("#8FC1E3") // Default fill 
           .stroke("none") // Default border 
-          .fillSelected("#5085A5") // Fill when activated 
+          .fillSelected("#31708E") // Fill when activated 
           .strokeSelected("none") // Border when activated 
           .color("white")
           .colorSelected("white")
@@ -798,22 +798,6 @@ function select(yearValue) {
 
 
       }
-
-      /*
-      // Lines to separate parts of visual
-      topEmissions.append("line").attr("x1", 610).attr("y1", 480).attr("x2", 730).attr("y2", 480).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 610).attr("y1", 480).attr("x2", 610).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 800).attr("y1", 480).attr("x2", 920).attr("y2", 480).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 800).attr("y1", 480).attr("x2", 800).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 1040).attr("y1", 480).attr("x2", 1160).attr("y2", 480).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 1040).attr("y1", 480).attr("x2", 1040).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 410).attr("y1", 480).attr("x2", 530).attr("y2", 480).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 410).attr("y1", 480).attr("x2", 410).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 210).attr("y1", 480).attr("x2", 330).attr("y2", 480).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 210).attr("y1", 480).attr("x2", 210).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 70).attr("y1", 480).attr("x2", 190).attr("y2", 480).attr("stroke-width", 0.5).attr("stroke", "black");
-      topEmissions.append("line").attr("x1", 70).attr("y1", 480).attr("x2", 70).attr("y2", 580).attr("stroke-width", 0.5).attr("stroke", "black");
-      */
 
       // Parse and write sums
       topEmissions.append("text").html(Math.round(parseFloat(sumOceania) * 1000) / 1000 + " MtCO2").attr("x", 620).attr("y", 570).attr("font-weight", "bold").attr("class", "lightText").attr("id", "sumOceania");
