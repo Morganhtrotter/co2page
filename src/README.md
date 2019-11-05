@@ -1,14 +1,14 @@
-**Link to out heroku-hosted website:** https://data-vizuals.herokuapp.com/
+**Link to my heroku-hosted website:** https://morgan-trotter.herokuapp.com/
 
 
 
 **Instructions for running locally**
 
-Run the website via node.js and calling
+Run the website via node.js and npm and calling
 
-    http-server -c-1
+    npm start
     
 Then navigate to your broswers url and enter the following:
 
-    localhost:8080
+    localhost:3000
 
