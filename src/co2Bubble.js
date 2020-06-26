@@ -15,7 +15,6 @@ function step() {
     currentValue = 1960;
     clearInterval(timer);
     // timer = 0;
-    playButton.text("Play");
   }
 }
 

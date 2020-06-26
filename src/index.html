@@ -6,22 +6,20 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		 <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-		<title>Portfolio</title>
-		
+		<title>CO2 Visualization</title>
 
 		<!-- Google font -->
-		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat:400,600" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css?family=Lato:700%7CMontserrat|Oswald|Raleway|Roboto:400,600" rel="stylesheet">
 		<link href="https://fonts.googleapis.com/css?family=Big+Shoulders+Display|Roboto+Condensed&display=swap" rel="stylesheet">
 
 		<!-- Bootstrap -->
-		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css"/>
+		<link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
 
 		<!-- Font Awesome Icon -->
-		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="../css/font-awesome.min.css">
 
 		<!-- Custom stlylesheet -->
-		<link type="text/css" rel="stylesheet" href="css/style.css"/>
-
+		<link type="text/css" rel="stylesheet" href="../css/style.css"/>
 
 		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,141 +28,80 @@
 		  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 		<![endif]-->
 
+
+
+		<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+
+		<script src="https://d3js.org/d3.v4.min.js"></script>
+		<script src="https://d3js.org/queue.v1.min.js"></script>
+		<script src="https://d3js.org/topojson.v1.min.js"></script>
+
+		<script src="https://d3js.org/d3-color.v1.min.js"></script>
+		<script src="https://d3js.org/d3-interpolate.v1.min.js"></script>
+		<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+		<script type="text/javascript" src="textfield.js"></script>
+		  <link rel="stylesheet" type="text/css" href="co2ScatterPlot.css" />
+
+
     </head>
-	<body class="bg-image bg-parallax overlay" style="background-image:url(./img/RO2_3866.jpg)">
 
-		<!-- Header -->
-		<header id="header" class="transparent-nav">
-			<div class="container">
+	<body>
+	<div id="topDivider">
+	</div>
 
-				<div class="navbar-header">
-					<!-- Logo -->
-					<div class="navbar-brand">
-						<a class="logo" href="index.html">
-						<!--<img src="./img/logo.png" alt="logo">-->
+	<div id="Instruct">
+		<h2>About:</h2>
+		<p class="Instructions">In my capstone course at UCSC, four group members and I set out to learn the Javascript library D3 and create unique,
+				interactive data visualizations surrounding climate change. Below is my contribution to the project.</p>
+		<h2>Instructions:</h2>
+		<p class="Instructions">Use the +1, +5, and +10 buttons to increase the year being visualized by 1, 5, and 10 years respectively. 
+				Similarly, use the -1, -5, -10 buttons to decrease the year. By default, the visualization is in "Isolated" mode,
+				meaning the data you see is the amount of Carbon Dioxide emitted by each country for that particular year (in metric tons).
+				To change this, select the "Compare" button, which shows you the overall change in emissions from one particular
+				year to any other year. Use the text box just below the "Compare" button to change the year(s) being visualized. Note: any
+				year after the year 2017 is predicted data obtained using a linear extrapolation formula.</p>
+	</div>
 
-						</a>
-					</div>
-					<!-- /Logo -->
+  <div class="chart-example" id="chart">
+    <svg id="mainChart">
+      <div id="buttonsArea"> </div>
+    </svg>
+  </div>
 
-					<!-- Mobile toggle -->
-					<button class="navbar-toggle">
-						<span></span>
-					</button>
-					<!-- /Mobile toggle -->
-				</div>
+  	<div id="bottomDivider"></div>
 
-				<!-- Navigation -->
-				<nav id="nav">
-					<ul class="main-menu nav navbar-nav navbar-right">
-						<li><a href="index.html">Home</a></li>
-						<li><a href="co2/co2.html">Data Visualizations</a></li>
-					</ul>
-				</nav>
-				<!-- /Navigation -->
+  <script src="d3-tip.js"></script>
 
-			</div>
-		</header>
-		<!-- /Header -->
+  <script type="text/javascript" src="co2Bubble.js"></script>
+	<script type="text/javascript" src="co2RadioButtons.js"></script>
 
-		<!-- Home -->
-
-		<div id="home" class="hero-area">
-
-			<h1 class="home-title" id="temphead">
-  				<span>Hello</span>
-  				<span>I'm Morgan</span>
-			</h1>
-
-			<!-- Backgound Image -->
-			<div class="bg-image bg-parallax overlay" style="background-image:url(./img/homebg.jpg)"></div>
-			<!-- /Backgound Image -->
-
-		</div>
-		<div id="colorBarOne">
-			<div id="container">
-				  <div id=flip>
-				    <div><div>designer</div></div>
-				    <div><div>full-stack coder</div></div>
-				    <div><div>D3 Enthusiast</div></div>
-				  </div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="column" id="colone">
-				<img src="./img/designIcon.png" alt="Design Icon">
-				<h2>Designer</h2>
-				<p>I approach design problems with curiousity, and I value simple content structure and clean design patterns.</p>
-				<h3>Things I enjoy designing:</h3>
-				<p>UI, UX, Web, Mobile, Apps, Logos</p>
-				<h3>Design Tools:</h3>
-				<ul>
-					<li>Adobe Photoshop CC</li>
-					<li>Adobe Illustrator CC</li>
-					<li>Pen and Paper</li>
-					<li>Wireframes</li>
-				</ul>
-			</div>
-			<div class="column" id="coltwo">
-				<img src="./img/frontEndIcon.png" alt="Front-End Icon">
-				<h2>Front-End Developer</h2>
-				<p>I like to build code from scratch and explore unique solutions to front-end development problems.</p>
-				<h3>Languages I speak:</h3>
-				<p>HTML, CSS, Pug, SASS, JavaScript</p>
-				<h3>Development Tools:</h3>
-				<ul>
-					<li>Sublime Text 3</li>
-					<li>Github</li>
-					<li>GitBash</li>
-					<li>CodePen</li>
-					<li>Chrome</li>
-				</ul>
-			</div>
-			<div class="column" id="colthree">
-				<img src="./img/backEndIcon.png" alt="Back-End Icon">
-				<h2>Back-End Developer</h2>
-				<p>I enjoy the technical challenges that can only be found in back-end development.</p>
-				<h3>Languages I speak:</h3>
-				<p>JavaScript, D3, Java, C++, PostgreSQL, MySQL, Python</p>
-				<h3>Development Tools:</h3>
-				<ul>
-					<li>Node.js</li>
-					<li>Express.js</li>
-					<li>NPM</li>
-					<li>Android Studio</li>
-				</ul>
-			</div>
-		</div>
-
-		<a id="Resume" href="./img/Resume.pdf">View my Resume</a>
-
-		<a id="Resume" href="https://github.com/Morganhtrotter">View my Github</a>
-
-		<a id="Resume" href="https://www.linkedin.com/in/morgan-trotter-15704216a/">View my LinkedIn</a>
-		
-		<!-- /Home -->
+	<div id="slider"></div>
+	<div id="choroInputBox"></div>
 
 		<!-- Footer -->
 		<footer id="footer" class="section">
 
-			<!-- container -->
-			<div class="container">
-
-				<!-- row -->
-				<div class="row">
-
-				</div>
-				<!-- /row -->
+			<h2>The Main Greenhouse Gas:</h2>
+			<p class="InstructionsFoot">Carbon Dioxide is the greenhouse gas that is the largest contributor to global warming. Humans have increased atmospheric Carbon Dioxide concentration by more than a third since the Industrial Revolution began. Since the Industrial Revolution, temperature levels have risen half a degree Celsius, but solar activity has roughly stayed the same. This small half a degree increase in temperature has a drastic effect on our oceans.</p>
+			<h2>The Effect on our Oceans:</h2>
+			<p class="InstructionsFoot">Oceans are vital ‘carbon sinks’, meaning that they absorb huge amounts of carbon dioxide, preventing it from reaching the upper atmosphere. Increased water temperatures and higher carbon dioxide concentrations than normal, which make oceans more acidic, are already having an impact on oceans. Oceans are already experiencing large-scale changes at a warming of 1°C, with critical thresholds expected to be reached at 1.5°C and above. Coral reefs are projected to decline by a further 70-90% at 1.5°C. At a warming of 2°C virtually all coral reefs will be lost. It’s not only a tragedy for wildlife: around half a billion people rely on fish from coral reefs as their main source of protein.</p>
+			<h2>Mitigating Climate Change:</h2>
+			<p class="InstructionsFoot">At the Paris climate conference (COP21) in December 2015, 195 countries adopted the first-ever universal, legally binding global climate deal. The agreement sets out a global action plan to put the world on track to avoid dangerous climate change by limiting global warming to well below 2°C. Of most interest is when cumulative global CO2 emissions exceed the 1 trillion tons of carbon (3.67 trillion tons of CO2) threshold, which according to the IPCC will raise the Earth’s surface temperature to 2°C above the pre-industrial minimum and trigger “dangerous interference” with the Earth’s climate system. The Fifth Assessment Report of the International Panel on Climate Change (IPCC) quantifies the global maximum CO2 the world can still emit and also have a likely chance of keeping global average temperature rise below 2°C above pre-industrial temperatures. It reports that the goal is likely to be met if cumulative emissions (including the 535 GtC emitted by the end of 2013) do not exceed 1 trillion tonnes of carbon (PgC). Unless our current linear trajectory changes, our CO2 levels are guaranteed to hit this 1 trillion ton threshold sometime between 2060 and 2070.</p>
 
 				<!-- row -->
 				<div id="bottom-footer" class="row">
 
+
+					<!-- copyright -->
+					<div class="col-md-8 col-md-pull-4">
+						<div class="footer-copyright">
+							 Source:<a class="white-text" href="http://www.globalcarbonatlas.org/en/CO2-emissions" target="_blank">http://www.globalcarbonatlas.org/en/CO2-emissions</a><br/>
+						</div>
+					</div>
+					<!-- /copyright -->
+
 				</div>
 				<!-- row -->
-
-			</div>
-			<!-- /container -->
 
 		</footer>
 		<!-- /Footer -->
@@ -175,9 +112,9 @@
 
 
 		<!-- jQuery Plugins -->
-		<script type="text/javascript" src="js/jquery.min.js"></script>
-		<script type="text/javascript" src="js/bootstrap.min.js"></script>
-		<script type="text/javascript" src="js/main.js"></script>
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../js/main.js"></script>
 
 	</body>
 </html>
