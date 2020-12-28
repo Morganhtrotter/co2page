@@ -12,4 +12,4 @@ Then navigate to your broswers url and enter the following:
 
     localhost:3000
 
-![Alt Text](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Alt Text](https://github.com/Morganhtrotter/co2-visualization/blob/master/src/img/final.gif)
