@@ -18,10 +18,35 @@ Entering "compare" mode will, by default, visualize the change in emissions from
 
 ![Alt Text](https://github.com/Morganhtrotter/co2-visualization/blob/master/src/img/Compare.gif)
 
-Change this by using the text box. For example, valuable insights can be found by visualizing the change in emissions between 2000 and 2010, or 2005 and 2015.
+Change this by using the text box. For example, valuable insights can be found by visualizing the change in emissions between 2000 and 2010, or 2005 and 2015. Green circles represent a decrease in emissions, red circles represent and increase in emissions.
 
 ![Alt Text](https://github.com/Morganhtrotter/co2-visualization/blob/master/src/img/CompareDecades.gif)
 
+Once I had my curated data in a .csv file, I used d3.csv to load my data into an array:
+
+		d3.csv('MtCO2Emissions.csv', function(error, data) {
+			if (error) {
+    			console.error('Error getting or parsing the data.');
+    			throw error;
+			}
+			var chart = bubbleChart().width(1300).height(800);
+			d3.select('#chart').datum(data).call(chart);
+		});
+
+And then filtered that array for the particular year being visualized:
+
+		function chart(selection) {
+      		var data = selection.datum();
+      		...
+      		data.filter(function(d) { return d.year == yearTemp})
+      		...
+      	}
+
+I used D3.max() to find the largest amount of emissions for one year in all of the years of data I obtained, and scaled the circles' radii exponentially:
+
+		var scaleRadius = d3.scalePow().exponent(0.5).domain([0, d3.max(data, function(d) {
+        	return +d[columnForRadius];
+      		})]).range([2, 90])
 
 **Instructions for running locally**
 
