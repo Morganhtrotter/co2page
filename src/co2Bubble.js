@@ -339,7 +339,6 @@ function select(yearValue) {
             }
           });
 
-
          u.transition()
           .duration(50)
           .attr('r', function(d) {
