@@ -1,3 +1,7 @@
+Front-End Languages and Libraries used: D3.js, JavaScript, HTML5, CSS3
+
+Back-End Languages and Technologies used: Node.js, Express.js, NPM
+
 What is this?
 
 During my capstone course at UCSC, four group members and I set out to learn the javascript library D3.js and create unique, interactive visualizations surrounding climate change. This is my contribution to the project. After gathering and curating data on each country's carbon dioxide emissions from The Global Carbon Atlas Organization, I used D3.js to bind this data to the radius of a circle and group each circle by continent. The bigger the circle, the more carbon dioxide emissions by that country for that particular year.
