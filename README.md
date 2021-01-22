@@ -98,6 +98,18 @@ Change this by using the text box. For example, valuable insights can be found b
 
 ![Alt Text](https://github.com/Morganhtrotter/co2-visualization/blob/master/src/img/CompareDecades.gif)
 
+This visualization utilizes D3's interpolate funciton to color each continents SVG text box in relation to the total change in MtCO2 Emissions.
+
+![Alt Text](https://github.com/Morganhtrotter/co2-visualization/blob/master/src/img/interpolate.gif)
+
+	...
+	if (sumOceania < 0) {
+          rectangleOceania.style("fill", d3.interpolateGreens(Math.abs(sumOceania/interpolateScalar)));
+        } else {
+          rectangleOceania.style("fill", d3.interpolateReds(sumOceania/interpolateScalar));
+        }
+	...
+
 Loading the data:
 
 Once I had my curated data in a .csv file, I used d3.csv to load my data into an array:
