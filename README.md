@@ -1,6 +1,6 @@
-Front-End Languages and Libraries used: D3.js, JavaScript, HTML5, CSS3
+Front-End Languages and Libraries used: D3.js, JavaScript, HTML5, CSS3.
 
-Back-End Languages and Technologies used: Node.js, Express.js, NPM
+Back-End Languages and Technologies used: Node.js, Express.js, NPM.
 
 What is this?
 
